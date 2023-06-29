@@ -1,0 +1,136 @@
+/* Start Variables */
+:root {
+    --cyan-color: hsl(179, 62%, 43%);
+    --yellow-color: hsl(71, 73%, 54%);
+    --gray-color: hsl(204, 43%, 93%);
+    --blue-color: hsl(218, 22%, 67%);
+}
+/* End Variables */
+/* Start Global Rules */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+    background-color: var(--gray-color);
+    position: relative;
+}
+/* End Global Rules */
+/* Start Card */
+.parent {
+    position: absolute;
+    left: 50%;
+    top: 400px;
+    transform: translate(-50%,-50%);
+    width: 600px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: -10px -10px 10px rgba(0, 0, 0, .2),10px 10px 10px rgba(0, 0, 0, .2);
+}
+.parent .container {
+    display: flex;
+    flex-wrap: wrap;
+}
+/* Start Top */
+.parent .container .top {
+    width: 100%;
+    padding: 40px;
+    padding-bottom: 30px;
+}
+.parent .container .top h2 {
+    color: var(--cyan-color);
+    margin-bottom: 20px;
+}
+.parent .container .top h3 {
+    font-size: 20px;
+    color: var(--yellow-color);
+    margin-bottom: 10px;
+}
+.parent .container .top p {
+    color: var(--blue-color);
+}
+/* End Top */
+/* Start Bottom */
+.parent .container .bottom {
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    color: white;
+}
+.parent .container .bottom .left {
+    padding: 30px 40px;
+    background-color: #657f7f;
+    border-radius: 0 0 0 5px;
+    width: 50%; 
+}
+.parent .container .bottom .left h3 {
+    margin-bottom: 20px;
+}
+.parent .container .bottom .left div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.parent .container .bottom .left div h2 {
+    font-size: 25px;
+    margin-right: 10px;
+}
+.parent .container .bottom .left div span {
+    color: var(--blue-color);
+}
+.parent .container .bottom .left p {
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+.parent .container .bottom .left button {
+    padding: 20px;
+    width: 200px;
+    border-radius: 5px;
+    background-color: var(--yellow-color);
+    border: none;
+    outline: none;
+    color: white;
+    font-weight: 700;
+}
+.parent .container .bottom .right {
+    padding: 40px;
+    width: 50%;
+    background-color: var(--cyan-color);
+    border-radius: 0 0 5px 0;
+}
+.parent .container .bottom .right h3 {
+    margin-bottom: 20px;
+}
+.parent .container .bottom .right p {
+    width: 200px;
+    opacity: .7;
+}
+/* End Bottom */
+/* End Card */
+/* Start Media Quries */
+/* Medium Screens */
+@media (max-width: 600px) {
+    .parent {
+        display: grid !important;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) !important;
+        width: 300px;
+        margin-top: 50px;
+    }
+    .parent .bottom {
+        flex-wrap: wrap;
+    }
+    .parent .bottom .left {
+        width: 300px !important;
+        border-radius: 0 0 0 0 !important;
+    }
+    .parent .bottom .right {
+        width: 300px !important;
+        border-radius: 0 0 5px 5px !important;
+    }
+}
+/* End Media Quries */
